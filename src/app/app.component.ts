@@ -4,7 +4,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { Observable } from 'rxjs';
 import { interval } from 'rxjs';
 import { Subscription} from 'rxjs';
-import {error} from 'util';
 
 @Component({
   selector: 'app-root',

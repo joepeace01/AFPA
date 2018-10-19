@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import { AppareilService} from '../services/appareil.service';
 
 @Component({
   selector: 'app-appareil',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './appareil.component.html',
   styleUrls: ['./appareil.component.css']
 })
@@ -19,8 +20,10 @@ export class AppareilComponent implements OnInit {
   }
   getColor() {
     if (this.appareilStatus === 'allumé') {
+      console.log('name : ' + this.appareilName + '  statut : ' + this.appareilStatus + '  green');
       return 'green';
     } else if (this.appareilStatus === 'éteint') {
+      console.log('name : ' + this.appareilName + '  statut : ' + this.appareilStatus + '  red');
       return 'red';
     }
   }
