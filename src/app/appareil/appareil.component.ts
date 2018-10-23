@@ -3,7 +3,6 @@ import { AppareilService} from '../services/appareil.service';
 
 @Component({
   selector: 'app-appareil',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './appareil.component.html',
   styleUrls: ['./appareil.component.css']
 })
